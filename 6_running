@@ -1,0 +1,11 @@
+# вычисляем номер дня когда бегун пробежит заданное расстояние
+
+day_distance = float(input("Введите результат в первого дня, км: "))
+target_distance_per_day = float(input("Введите требуемый результат, км за день: "))
+days_num = 1
+
+while day_distance < target_distance_per_day:
+    day_distance = day_distance * 1.1
+    days_num = days_num + 1
+
+print(f"Требуемый результат будет достигнут на {days_num} день")
