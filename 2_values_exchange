@@ -1,0 +1,22 @@
+# обмен занчений соседних элементов списка
+
+my_list = [i for i in input("Введите элементы списка через пробел, по завершении нажмите enter: ").split()]
+print("Список до обмена значениями:")
+print(my_list)
+
+if len(my_list) % 2 == 0:   # если количество элементов списка чётное
+    i = 0
+    while i < len(my_list):
+        a = my_list[i]
+        my_list[i] = my_list[i + 1]
+        my_list[i + 1] = a
+        i += 2
+else:                       # если количество элементов списка нечётное
+    i = 0
+    while i < len(my_list) - 1:
+        a = my_list[i]
+        my_list[i] = my_list[i + 1]
+        my_list[i + 1] = a
+        i += 2
+print("Список после обмена значениями:")
+print(my_list)

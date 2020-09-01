@@ -1,0 +1,23 @@
+# структура данных "Товары"
+
+# создаём список товраов с их характеристками, все данные вводятся пользователем
+products = []
+while input("Хотите добавить новый товар? Введите да/нет: ") == "да":
+    number = int(input("Введите номер товара: "))
+    parameters = {}
+    while input("Хотите добавить новый параметр товара? Введите да/нет: ") == "да":
+        param_key = input("Введите параметр товара (например, название или цена): ")
+        param_value = input("Введите значение параметра: ")
+        parameters[param_key] = param_value
+    products.append(tuple([number, parameters]))
+print(products)
+
+# создаём аналитику о товарах
+analytics = {}
+for el in products:
+    for param_key, param_value in el[1].items():
+        if param_key in analytics:
+            analytics[param_key].append(param_value)
+        else:
+            analytics[param_key] = [param_value]
+print(analytics)
