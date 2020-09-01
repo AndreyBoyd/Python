@@ -1,0 +1,24 @@
+# реализация структуры "Рейтинг" - невозрастающий набор натуральных чисел
+
+# создаём набор натуральных чисел и выводим его для нагладности
+my_list = [7, 5, 3, 3, 2]
+print(f"Имеется набор натуральных чисел (Рейтинг): {my_list}")
+
+# запрашиваем у пользователя целое число
+new_num = int(input("Введите целое число - новый элемент Рейтинга: "))
+check_new_number = my_list.count(new_num)
+
+for el in my_list:  # проверяем наличие введенного числа в рейтинге
+    if check_new_number > 0:  # если такое число есть, то записываем введённое число рядом
+        i = my_list.index(new_num)
+        my_list.insert(i + check_new_number, new_num)
+        break
+    else:  # определяем место для введёного числа если его нет в списке
+        if new_num > el:
+            a = my_list.index(el)
+            my_list.insert(a, new_num)
+            break
+        elif new_num < my_list[len(my_list) - 1]:
+            my_list.append(new_num)
+
+print(my_list)
