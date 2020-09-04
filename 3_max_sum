@@ -1,0 +1,10 @@
+# реализуем функцию возвращающую сумму двух наибольших аргументов
+
+def my_func(a, b, c):
+    my_list = [a, b, c]
+    min_num = min(my_list)
+    my_list.remove(min_num)
+    print(f"Сумма наибольших аргументов = {sum(my_list)}")
+
+
+my_func(int(input("введите a = ")), int(input("Введите b = ")), int(input("Введите c = ")))

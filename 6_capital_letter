@@ -1,0 +1,16 @@
+# реализовываем функцию делающую первую букву прописной
+
+def my_func(a):
+
+    word = a.split(' ')
+    my_list = []
+    for i in word:
+        el = str(i)
+        first_letter = el[:1].upper()
+        word = first_letter + el[1:]
+        my_list.append(word)
+    return my_list
+
+
+print(my_func(a=input("Введите слово латинскими буквами в нижнем регистре: ")))
+print(my_func(a=str(input("Введите строку слов латинскими буквами в нижнем регистре через пробел: "))))

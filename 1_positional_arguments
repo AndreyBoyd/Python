@@ -1,0 +1,11 @@
+# реализуем функцию принимающую два числа (позиционные аргументы)
+
+def my_division(a, b):
+    try:
+        result = a / b
+        return f"a / b = {result}"
+    except ZeroDivisionError:
+        return "Делить на 0 нельзя!"
+
+
+print((my_division(a=int(input("Введите переменную a: ")), b=int(input("Введите переменную b: ")))))
