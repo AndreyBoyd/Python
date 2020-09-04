@@ -1,0 +1,20 @@
+#  выводим сумму чисел введенных пользователем через пробел
+
+def my_func():
+    sum_result = 0
+    end_program = False
+    while end_program is False:
+        number = input("Введите числа через пробел и enter или Q для завершения программы - ").split()
+        result = 0
+        for el in range(len(number)):
+            if number[el] == "q" or number[el] == "Q":
+                end_program = True
+                break
+            else:
+                result = result + int(number[el])
+        sum_result = sum_result + result
+        print(f"Текущая сумма = {sum_result}")
+    print(f"Окончательная сумма =  {sum_result}")
+
+
+my_func()

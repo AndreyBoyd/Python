@@ -1,0 +1,10 @@
+# возводим целое число x в отрицательную степень y
+
+def my_func(x, y):
+    while y < 0:
+        return print(1 / x ** abs(y))
+    else:
+        return print("Необходимо ввести значение y < 0!")
+
+
+my_func(int(input("Введите онование x = ")), int(input("Введите степень (меньше 0) y = ")))
